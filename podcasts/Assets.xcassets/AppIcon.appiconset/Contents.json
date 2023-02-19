@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "podcast_orange_1024.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"

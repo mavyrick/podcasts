@@ -7,15 +7,17 @@
 
 import SwiftUI
 
+// The deployment target is set to iOS 16.1 (the latest).
+// If this app was for a wider audience the target should probably be set lower.
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        // Use of dependency injection for view model
+        PodcastsListView(
+            viewModel: PodcastsListViewModel(
+                apiRequestService: APIRequestService(),
+                urlGenerator: ITunesURLGenerator()
+            )
+        )
     }
 }
 
