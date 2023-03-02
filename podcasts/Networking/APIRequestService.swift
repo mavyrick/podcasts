@@ -2,35 +2,30 @@
 //  APIRequestService.swift
 //  podcasts
 //
-//  Created by Josh Sorokin on 2023. 02. 08..
+//  Created by Josh Sorokin on 2023. 02. 19..
 //
 
 import Foundation
+import Combine
 
 class APIRequestService: APIRequestServiceProtocol {
     
-    // Because of the use of generics any model type passed in can be decoded to making this code reusable.
-    //
-    // Built in Result type is used here for convenience.
-    func getData<T: Decodable>(for urlString: String, completion: @escaping (Result<T, Error>) -> Void) {
+    func getData<T>(for urlString: String) -> AnyPublisher<T, APIError> where T: Decodable {
         
-        guard let url = URL(string: urlString) else { return }
-        
-        let task = URLSession.shared.dataTask(with: url) {
-            data, response, error in
-            
-            let decoder = JSONDecoder()
-            
-            if let data = data {
-                do {
-                    let object = try decoder.decode(T.self, from: data)
-                    completion(.success(object))
-                } catch let decoderError {
-                    completion(.failure(decoderError))
-                }
-            }
+        guard let url = URL(string: urlString) else {
+            let error = APIError.parsing(description: "Couldn't create URL")
+            return Fail(error: error).eraseToAnyPublisher()
         }
-        task.resume()
+        
+        return URLSession.shared.dataTaskPublisher(for: URLRequest(url: url))
+            .map { $0.data }
+            .decode(type: T.self, decoder: JSONDecoder())
+            .catch({ _ in
+                let error = APIError.network(description: "There was a network error")
+                return Fail<T, APIError>(error: error).eraseToAnyPublisher()
+            })
+                .eraseToAnyPublisher()
     }
+    
     
 }

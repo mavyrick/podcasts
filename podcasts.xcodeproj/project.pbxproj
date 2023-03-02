@@ -17,7 +17,6 @@
 		84AE5A0D2993C7E30039DE59 /* PodcastsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE5A0C2993C7E30039DE59 /* PodcastsListView.swift */; };
 		84AE5A0F2993C82D0039DE59 /* PodcastsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE5A0E2993C82D0039DE59 /* PodcastsListViewModel.swift */; };
 		84AE5A112993C8DD0039DE59 /* SearchableListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE5A102993C8DD0039DE59 /* SearchableListViewModelProtocol.swift */; };
-		84AE5A152993C9F10039DE59 /* APIRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE5A142993C9F10039DE59 /* APIRequestService.swift */; };
 		84AE5A172993CF090039DE59 /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE5A162993CF090039DE59 /* Podcast.swift */; };
 		84AE5A192993CF550039DE59 /* PodcastDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE5A182993CF550039DE59 /* PodcastDetailsView.swift */; };
 		84AE5A1C299422CE0039DE59 /* PodcastRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE5A1B299422CE0039DE59 /* PodcastRowView.swift */; };
@@ -27,6 +26,7 @@
 		84AE5A2A2997CFBC0039DE59 /* String+ToFormattedDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE5A292997CFBC0039DE59 /* String+ToFormattedDate.swift */; };
 		84AE5A2C299811300039DE59 /* NoResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE5A2B299811300039DE59 /* NoResultsView.swift */; };
 		84AE5A2E299817E80039DE59 /* SearchCancelBehaviorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE5A2D299817E80039DE59 /* SearchCancelBehaviorView.swift */; };
+		84BDFCE529A2B16D00BC0EB8 /* APIRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BDFCE429A2B16D00BC0EB8 /* APIRequestService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +60,6 @@
 		84AE5A0C2993C7E30039DE59 /* PodcastsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastsListView.swift; sourceTree = "<group>"; };
 		84AE5A0E2993C82D0039DE59 /* PodcastsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastsListViewModel.swift; sourceTree = "<group>"; };
 		84AE5A102993C8DD0039DE59 /* SearchableListViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableListViewModelProtocol.swift; sourceTree = "<group>"; };
-		84AE5A142993C9F10039DE59 /* APIRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestService.swift; sourceTree = "<group>"; };
 		84AE5A162993CF090039DE59 /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
 		84AE5A182993CF550039DE59 /* PodcastDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastDetailsView.swift; sourceTree = "<group>"; };
 		84AE5A1B299422CE0039DE59 /* PodcastRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastRowView.swift; sourceTree = "<group>"; };
@@ -71,6 +70,7 @@
 		84AE5A292997CFBC0039DE59 /* String+ToFormattedDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ToFormattedDate.swift"; sourceTree = "<group>"; };
 		84AE5A2B299811300039DE59 /* NoResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoResultsView.swift; sourceTree = "<group>"; };
 		84AE5A2D299817E80039DE59 /* SearchCancelBehaviorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCancelBehaviorView.swift; sourceTree = "<group>"; };
+		84BDFCE429A2B16D00BC0EB8 /* APIRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,7 +172,7 @@
 		84AE5A132993C9E20039DE59 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				84AE5A142993C9F10039DE59 /* APIRequestService.swift */,
+				84BDFCE429A2B16D00BC0EB8 /* APIRequestService.swift */,
 				84AE5A1D299695870039DE59 /* APIRequestServiceProtocol.swift */,
 				84AE5A1F2996E2090039DE59 /* ITunesURLGenerator.swift */,
 				84AE5A212996EB4A0039DE59 /* URLGeneratorProtocol.swift */,
@@ -372,7 +372,7 @@
 				84AE5A2A2997CFBC0039DE59 /* String+ToFormattedDate.swift in Sources */,
 				84AE5A1C299422CE0039DE59 /* PodcastRowView.swift in Sources */,
 				84AE5A1E299695870039DE59 /* APIRequestServiceProtocol.swift in Sources */,
-				84AE5A152993C9F10039DE59 /* APIRequestService.swift in Sources */,
+				84BDFCE529A2B16D00BC0EB8 /* APIRequestService.swift in Sources */,
 				84AE59E32993C7A30039DE59 /* podcastsApp.swift in Sources */,
 				84AE5A2C299811300039DE59 /* NoResultsView.swift in Sources */,
 				84AE5A0F2993C82D0039DE59 /* PodcastsListViewModel.swift in Sources */,
